@@ -17,11 +17,23 @@ public class NosProfileTest {
     public void testPrimeNumber() {
         assertTrue(NosProfile.isPrime(7));
     }
+    @Test
+    public void testNotPrimeNumber() {
+        assertFalse(NosProfile.isPrime(4));
+    }
+
 
     @Test
-    public void testCompositeNumber() {
-        assertFalse(NosProfile.isPrime(9));
+    void testCompositeNumber() {
+        assertTrue(NosProfile.isComposite(8));
     }
+
+    @Test
+    void testNotCompositeNumber() {
+        assertFalse(NosProfile.isComposite(7));
+    }
+
+
 
     @Test
     public void testPerfectNumber() {
@@ -37,6 +49,7 @@ public class NosProfileTest {
     public void testPerfectSquare() {
         assertTrue(NosProfile.isSquare(16));
     }
+
 
     @Test
     public void testNotSquare() {
@@ -62,4 +75,44 @@ public class NosProfileTest {
     public void testNotPalindrome() {
         assertFalse(NosProfile.isPalindrome(123));
     }
+    @Test
+    void testArmstrong() {
+        assertTrue(NosProfile.isArmstrong(153));
+    }
+    @Test
+    void testNotArmstrong() {
+        assertFalse(NosProfile.isArmstrong(123));
+    }
+
+    @Test
+    void testAbundant() {
+        assertTrue(NosProfile.isAbundant(12));
+    }
+
+    @Test
+    void testNotAbundant() {
+        assertFalse(NosProfile.isAbundant(8));
+    }
+    @Test
+    void testDeficient() {
+        assertTrue(NosProfile.isDeficient(8));
+    }
+
+    @Test
+    void testNotDeficient() {
+        assertFalse(NosProfile.isDeficient(12));
+    }
+    @Test
+    void testDigitalSum() {
+        assertEquals(6, NosProfile.digitalSum(123));
+    }
+    @Test
+    void testNotFibonacci() {
+        assertFalse(NosProfile.isFibonacci(7));
+    }
+    @Test
+    void testFibonacci() {
+        assertTrue(NosProfile.isFibonacci(8));
+    }
+
 }
